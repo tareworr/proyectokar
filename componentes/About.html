@@ -12,15 +12,15 @@
  <header class="nav">
   <button class="burger" id="burger" aria-label="Abrir menú"
           aria-expanded="false" aria-controls="menu">☰</button>
-
-  <a class="brand" href="#">
-    <img id="logo" src="/img/logo.jpeg" alt="logo" />
-    
+<a class="brand" href="#">
+    <!-- ⬇️ logo desde /img/, pero como estamos en /componentes/, subimos un nivel -->
+    <img id="logo" src="../img/logo.jpeg" alt="logo" />
   </a>
-
+  
   <nav class="menu" id="menu" hidden>
-    <a class="pill pill--active" href="/index.html">Kamove</a>
-    <a class="pill" href="/componentes/About.html">About</a>
+    <!-- (opcional) corrige también los enlaces si quieres evitar 404 en Pages -->
+    <a class="pill pill--active" href="../index.html">Kamove</a>
+    <a class="pill" href="About.html">About</a>
     <a class="pill" href="#contacto">Movimiento</a>
     <a class="pill" href="#footer">Blog</a>
   </nav>
@@ -88,12 +88,12 @@
     <section class="team">
       <h2 class="team__title">Equipo</h2>
       <div class="team__underline" aria-hidden="true"></div>
-      <p class="team__lead">This is your Team section. Briefly introduce the team then add their bios below. Click here to edit.</p>
+     
 
       <div class="team__grid">
         <!-- Card 1 -->
         <article class="member">
-          <img class="member__img" src="/img/rubeiro.jpeg" alt="Rubeiro Morcillo Saa">
+           <img class="member__img" src="../img/rubeiro.jpeg" alt="Rubeiro Morcillo Saa">
           <div class="member__body">
             <h3 class="member__name">Rubeiro Morcillo Saa</h3>
             <ul class="member__list">
@@ -111,7 +111,8 @@
 
         <!-- Card 2 -->
         <article class="member">
-          <img class="member__img" src="/img/korag.jpeg" alt="Yecid Fabián Silva Catuché">
+         <!-- ⬇️ imagen desde /img/ -->
+          <img class="member__img" src="../img/korag.jpeg" alt="Yecid Fabián Silva Catuché">
           <div class="member__body member__body--tall">
             <h3 class="member__name">Yecid Fabián Silva Catuché</h3>
             <ul class="member__list">
