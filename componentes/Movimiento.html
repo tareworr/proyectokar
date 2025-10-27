@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Kamove</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="Movimientos.css" />
+</head>
+<body>
+
+ <header class="nav" id="site-nav">
+  <button class="burger" type="button" aria-label="Abrir menú" aria-controls="menu" aria-expanded="false">☰</button>
+
+  <a href="index.html" class="brand" aria-label="Inicio">
+    <img id="logo" src="img/logo.jpeg" alt="Kamove">
+  </a>
+
+    <nav class="menu" id="menu">
+      <a class="pill pill--active" href="index.html">Kamove</a>
+      <a class="pill" href="componentes/About.html">About</a>
+      <a class="pill" href="componentes/Movimiento.html">Movimiento</a>
+      <a class="pill" href="#footer">Blog</a>
+    </nav>
+  </header>
+
+
+
+  <!-- SECTION: PROMOTIONAL -->
+  <section class="promo">
+    <div class="container promo__inner">
+      <h1 class="promo__title">
+        CUERPO Y ARQUITECTURA: en resonancia corporal y<br class="br-md"> espacial.
+      </h1>
+    </div>
+  </section>
+
+  <!-- SECTION: VIDEO FULL-WIDTH (cuadro blanco) -->
+  <section class="video-band">
+    <div class="video-frame">
+      <!-- Coloca tu archivo en /videos/parckurcoliseo.mp4 -->
+      <video
+        src="videos/parckurcoliseo.mp4"
+        autoplay
+        muted
+        loop
+        playsinline
+        poster="media/poster.jpg">
+        Tu navegador no soporta el video HTML5.
+      </video>
+    </div>
+  </section>
+
+  <!-- ====== SECCIÓN: TÉCNICAS (con videos desplegables) ====== -->
+  <section class="tecnicas">
+    <div class="tec__container">
+
+      <h2 class="tec__title">Técnicas</h2>
+
+      <div class="tec__grid">
+        <!-- Card 1 -->
+        <article class="tec-card">
+          <div class="tec-card__badge">1</div>
+          <div class="tec-card__body">
+            <h3 class="tec-card__heading">Danza contemporanea</h3>
+            <p class="tec-card__text">
+              La danza contemporanea integra diversas formas de moverse, lo que permite que a traves de ella podamos
+              dialogar y habitar en libertad el movimiento.
+            </p>
+
+            <button class="tec-card__btn" type="button"
+                    aria-expanded="false" aria-controls="tec-panel-1">More Info</button>
+
+            <div id="tec-panel-1" class="tec-panel" hidden>
+              <div class="tec-video">
+                <!-- cambia la ruta si tu video está en otro lugar -->
+                <video src="videos/karolaipresentaciondanza.mp4" autoplay muted loop playsinline></video>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="tec-card tec-card--mid">
+          <div class="tec-card__badge">2</div>
+          <div class="tec-card__body">
+            <h3 class="tec-card__heading">Breaking</h3>
+            <p class="tec-card__text">
+              En el break, la calle es un espacio de expresión; el suelo, memoria. Cada movimiento resignifica el
+              cuerpo en territorio vivo y de resistencia.
+            </p>
+
+            <button class="tec-card__btn" type="button"
+                    aria-expanded="false" aria-controls="tec-panel-2">More Info</button>
+
+            <div id="tec-panel-2" class="tec-panel" hidden>
+              <div class="tec-video">
+                <video src="videos/rubeirovideopresentacion.mp4" autoplay muted loop playsinline></video>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="tec-card">
+          <div class="tec-card__badge">3</div>
+          <div class="tec-card__body">
+            <h3 class="tec-card__heading">Parkour</h3>
+            <p class="tec-card__text">
+              El parkour, como deporte y filosofía del movimiento, transforma los espacios urbanos en escenarios
+              dinámicos; donde el cuerpo entra en dialogo con la arquitectura con el cuerpo.
+            </p>
+
+            <button class="tec-card__btn" type="button"
+                    aria-expanded="false" aria-controls="tec-panel-3">More Info</button>
+
+            <div id="tec-panel-3" class="tec-panel" hidden>
+              <div class="tec-video">
+                <video src="videos/koragpresentacionParkur.mp4" autoplay muted loop playsinline></video>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+  <!-- ====== BLOQUE 1: Sección de texto a dos columnas ====== -->
+<section class="info-band">
+  <div class="info__container">
+    <div class="info__col info__col--left">
+      <p class="info__lead">
+        En mis clases, a través del movimiento, entrenamos habilidades motrices que nos permiten
+        habitar cualquier espacio y brindamos la oportunidad de adquirir herramientas corporales a partir
+        de distintas técnicas de movimiento, que contribuirán a la construcción creativa de coreografías
+        danzadas en espacios no convencionales.
+      </p>
+    </div>
+
+    <div class="info__col info__col--right">
+      <div class="info__box">
+        <h3 class="info__title">HORARIO</h3>
+        <p class="info__text">
+          Domingos 9:00 AM A 10:30 AM<br>
+          Coliseo del pueblo en Muros.
+        </p>
+      </div>
+
+      <p class="info__closing">
+        El cuerpo en movimiento reconfigura el habitar el espacio urbano.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ====== BLOQUE 2: Footer ====== -->
+<footer class="site-footer">
+  <div class="footer__inner">
+    <div class="footer__badge">© 2025 by Kamove. All rights reserved.</div>
+
+    <ul class="footer__social" aria-label="Redes sociales">
+      <li>
+        <a href="#" aria-label="Facebook" class="sbtn">
+          <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+            <path fill="currentColor" d="M22 12.06C22 6.48 17.52 2 11.94 2S2 6.48 2 12.06C2 17.07 5.66 21.2 10.44 22v-7H7.9v-2.94h2.54V9.86c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.23.2 2.23.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.77L15.9 15H13.55v7C18.34 21.2 22 17.07 22 12.06z"/>
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a href="#" aria-label="Twitter/X" class="sbtn">
+          <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+            <path fill="currentColor" d="M3 3h4.6l5.7 7.5L19.1 3H21l-7 9.2L21 21h-4.6l-6-8L4.9 21H3l7.3-9.6z"/>
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a href="#" aria-label="YouTube" class="sbtn">
+          <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+            <path fill="currentColor" d="M23.5 6.2a3.2 3.2 0 0 0-2.3-2.3C19.3 3.5 12 3.5 12 3.5s-7.3 0-9.2.4A3.2 3.2 0 0 0 .5 6.2 33.8 33.8 0 0 0 .1 12a33.8 33.8 0 0 0 .4 5.8 3.2 3.2 0 0 0 2.3 2.3c1.9.4 9.2.4 9.2.4s7.3 0 9.2-.4a3.2 3.2 0 0 0 2.3-2.3c.3-1.9.4-3.8.4-5.8 0-2-.1-3.9-.4-5.8zM9.8 15.5V8.5l6.1 3.5-6.1 3.5z"/>
+          </svg>
+        </a>
+      </li>
+    </ul>
+  </div>
+</footer>
+
+  <!-- ====== /TÉCNICAS ====== -->
+
+  <!-- Botón flotante "Let's Chat!" -->
+  <button class="chat-fab" type="button" aria-label="Open chat">
+    <span class="chat-fab__icon" aria-hidden="true">💬</span>
+    <span class="chat-fab__text">Let’s Chat!</span>
+  </button>
+
+
+  <script>
+class MobileNav {
+  constructor(root, breakpoint = 768) {
+    this.root = root;
+    this.burger = root.querySelector('.burger');
+    this.menu = root.querySelector('#menu');
+    this.breakpoint = breakpoint;
+    this.isOpen = false;
+
+    this.handleToggle = this.handleToggle.bind(this);
+    this.handleKeydown = this.handleKeydown.bind(this);
+    this.handleClickOutside = this.handleClickOutside.bind(this);
+    this.handleResize = this.handleResize.bind(this);
+
+    this.init();
+  }
+
+  init() {
+    if (!this.burger || !this.menu) return;
+    this.burger.addEventListener('click', this.handleToggle);
+    document.addEventListener('keydown', this.handleKeydown);
+    window.addEventListener('resize', this.handleResize);
+    document.addEventListener('click', this.handleClickOutside, true);
+  }
+
+  open() {
+    this.isOpen = true;
+    this.burger.setAttribute('aria-expanded', 'true');
+    this.menu.removeAttribute('inert');
+    // Enfoca el primer link
+    const firstLink = this.menu.querySelector('a');
+    if (firstLink) firstLink.focus();
+  }
+
+  close() {
+    this.isOpen = false;
+    this.burger.setAttribute('aria-expanded', 'false');
+    this.menu.setAttribute('inert', '');
+    this.burger.focus();
+  }
+
+  handleToggle() {
+    this.isOpen ? this.close() : this.open();
+  }
+
+  handleKeydown(e) {
+    // Esc cierra
+    if (e.key === 'Escape' && this.isOpen) this.close();
+  }
+
+  handleClickOutside(e) {
+    if (!this.isOpen) return;
+    const clickInside = this.root.contains(e.target);
+    if (!clickInside) this.close();
+  }
+
+  handleResize() {
+    // Si pasas a desktop, asegúrate de dejar abierto sin overlay
+    if (window.innerWidth >= this.breakpoint) {
+      this.burger.setAttribute('aria-expanded', 'false');
+      this.menu.removeAttribute('inert');
+      this.isOpen = false;
+    } else {
+      // En móvil vuelve a colapsar por defecto
+      this.menu.setAttribute('inert', '');
+    }
+  }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Inicia el menú
+  const nav = document.getElementById('site-nav');
+  new MobileNav(nav, 768);
+});
+</script>
+
+  <!-- JS mínimo para desplegar/ocultar los videos -->
+  <script>
+document.addEventListener('DOMContentLoaded', () => {
+  const DURATION = 350; // ms — usa el mismo tiempo que tu transición CSS
+
+  const btns  = Array.from(document.querySelectorAll('.tec-card__btn'));
+
+  function openPanel(btn, panel) {
+    // mostrar y animar de 0 -> altura real
+    panel.removeAttribute('hidden');
+    panel.style.overflow = 'hidden';
+    panel.style.maxHeight = '0px';
+    void panel.offsetHeight; // reflow
+    const target = panel.scrollHeight;
+    panel.style.maxHeight = target + 'px';
+    btn.setAttribute('aria-expanded', 'true');
+
+    // al terminar la animación, que quede estático
+    setTimeout(() => {
+      panel.style.maxHeight = 'none';
+      panel.style.overflow = '';
+    }, DURATION);
+
+    const video = panel.querySelector('video');
+    if (video) video.play().catch(()=>{});
+  }
+
+  function closePanelAnimated(btn, panel) {
+    // si estaba en 'auto', pon su altura real para poder animar a 0
+    if (getComputedStyle(panel).maxHeight === 'none') {
+      panel.style.maxHeight = panel.scrollHeight + 'px';
+    }
+    panel.style.overflow = 'hidden';
+    void panel.offsetHeight;  // reflow
+    panel.style.maxHeight = '0px';
+    btn.setAttribute('aria-expanded', 'false');
+
+    setTimeout(() => {
+      panel.setAttribute('hidden', '');
+      panel.style.maxHeight = '';
+      panel.style.overflow = '';
+      const video = panel.querySelector('video');
+      if (video) { video.pause(); video.currentTime = 0; }
+    }, DURATION);
+  }
+
+  function closePanelInstant(btn, panel) {
+    // cierre sin animación (para cerrar cualquier otro abierto)
+    btn.setAttribute('aria-expanded', 'false');
+    panel.setAttribute('hidden', '');
+    panel.style.maxHeight = '';
+    panel.style.overflow  = '';
+    const video = panel.querySelector('video');
+    if (video) { video.pause(); video.currentTime = 0; }
+  }
+
+  btns.forEach((btn) => {
+    const panelId = btn.getAttribute('aria-controls');
+    const panel   = document.getElementById(panelId);
+
+    btn.addEventListener('click', () => {
+      const isOpen = btn.getAttribute('aria-expanded') === 'true';
+
+      if (isOpen) {
+        // Cerrar el mismo panel (con animación)
+        closePanelAnimated(btn, panel);
+        return;
+      }
+
+      // Cerrar INSTANTÁNEAMENTE cualquier otro panel abierto
+      btns.forEach(otherBtn => {
+        if (otherBtn === btn) return;
+        if (otherBtn.getAttribute('aria-expanded') === 'true') {
+          const otherPanel = document.getElementById(otherBtn.getAttribute('aria-controls'));
+          closePanelInstant(otherBtn, otherPanel);
+        }
+      });
+
+      // Abrir el panel pulsado
+      openPanel(btn, panel);
+    });
+  });
+});
+</script>
+
+
+
+<!--funcion de la presnetacion: -->
+
+
+</body>
+</html>
