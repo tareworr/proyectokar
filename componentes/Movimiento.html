@@ -354,7 +354,43 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 </script>
 
+<!-- ===== FIX: rutas de logo y videos para GitHub Pages / local ===== -->
+<script>
+(function() {
+  // Detecta si es un sitio en *.github.io y calcula la raíz del repo
+  const isGitHubPages = /\.github\.io$/.test(location.hostname);
+  const parts = location.pathname.split('/').filter(Boolean);
+  const repo = isGitHubPages && parts.length ? `/${parts[0]}/` : '/';
+  const root = isGitHubPages ? repo : '/';
 
+  const asset = (p) => (root + p.replace(/^\/+/, ''));
+
+  // Logo
+  const logo = document.getElementById('logo');
+  if (logo) logo.src = asset('img/logo.jpeg');
+
+  // Video grande (band)
+  const mainVideo = document.querySelector('.video-frame video');
+  if (mainVideo) {
+    mainVideo.src = asset('videos/parckurcoliseo.mp4');
+    mainVideo.poster = asset('media/poster.jpg');
+    // Reforzar autoplay en móviles (silenciado ya está)
+    mainVideo.setAttribute('playsinline','');
+    mainVideo.muted = true;
+  }
+
+  // Videos de tarjetas
+  const v1 = document.querySelector('#tec-panel-1 video');
+  if (v1) v1.src = asset('videos/karolaipresentaciondanza.mp4');
+
+  const v2 = document.querySelector('#tec-panel-2 video');
+  if (v2) v2.src = asset('videos/rubeirovideopresentacion.mp4');
+
+  const v3 = document.querySelector('#tec-panel-3 video');
+  if (v3) v3.src = asset('videos/koragpresentacionParkur.mp4');
+})();
+</script>
+<!-- ===== /FIX ===== -->
 
 <!--funcion de la presnetacion: -->
 
