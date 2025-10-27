@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kamove</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* --- Estilos mínimos mobile para el toggle --- */
+    .btn-toggle{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      width:100%;
+      padding:14px 16px;
+      font-size:16px;
+      font-weight:600;
+      border:0;
+      border-radius:12px;
+      background:#111;
+      color:#fff;
+      cursor:pointer;
+      touch-action:manipulation;
+    }
+    .btn-toggle:active{ transform:scale(0.99); }
+    .mv-panel{
+      overflow:hidden;
+      transition:max-height 0.35s ease;
+      max-height:0;
+      background:#fff;
+      border-radius:12px;
+      box-shadow:0 1px 3px rgba(0,0,0,.08);
+      margin-top:12px;
+      padding:0 16px; /* se activa cuando abre */
+    }
+    .mv-panel.open{
+      padding:16px;
+      max-height:600px; /* suficiente para el contenido; ajusta si cambias textos */
+    }
+    .mv-panel h3{
+      margin:8px 0 6px;
+      font-size:18px;
+    }
+    .mv-panel p{
+      margin:0 0 8px;
+      line-height:1.5;
+      font-size:15px;
+    }
+    /* Espaciado del card en mobile */
+    .story .card{ padding:16px; }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="nav">
+    <button class="burger" aria-label="Abrir menú" aria-expanded="false">☰</button>
+    <a class="brand" href="#">
+      <img id="logo" src="./img/logo.jpeg" alt="logo" />
+    </a>
+    <nav class="menu" id="menu">
+      <a class="pill pill--active" href="#">Kamove</a>
+      <a class="pill" href="/componentes/About.html">About</a>
+      <a class="pill" href="#contacto">Movimiento</a>
+      <a class="pill" href="#footer">Blog</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero__wrap">
+      <h1>KAMOVE</h1>
+      <p>
+        Este portafolio amplia la manera en la que se vive el movimiento; permite el cuerpo en la construcción y deconstrucción de la técnica ahondando en la exploración de un nuevo lenguaje corporal propio que aporta a la formación de cuerpos interdisciplinares en danza. 
+      </p>
+    </div>
+  </section>
+
+  <!-- OUR STORY -->
+  <section id="story" class="story">
+    <div class="story__bg" aria-hidden="true"></div>
+    <article class="card">
+      <h2>MAS INFORMACION</h2>
+     
+      <!-- BOTÓN DE TOGGLE (reemplaza el <a href="#" class="btn">Learn More</a>) -->
+      <button class="btn-toggle" id="aboutToggle" aria-expanded="false" aria-controls="mv-panel">
+        Ver misión y visión
+      </button>
+
+      <!-- PANEL COLAPSABLE -->
+      <div id="mv-panel" class="mv-panel" hidden>
+        <h3>MISIÓN</h3>
+        <p>
+          La misión es explorar la diversidad de lenguajes corporales, permitiendo que el cuerpo hable desde una perspectiva múltiple del movimiento.
+        </p>
+
+        <h3>VISIÓN</h3>
+        <p>
+          La visión es lograr procesos de deconstrucción del movimiento para encontrar procesos creativos auténticos.
+        </p>
+      </div>
+    </article>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="contact">
+    <div class="contact__text">
+      <h2>Get in Touch<br>with Kamove</h2>
+      <p>Reach out to us for any inquiries or to join our movement community.</p>
+      <ul class="list">
+        <li>123 Kamove Street, City, Country</li>
+        <li><a href="mailto:info@kamove.com">info@kamove.com</a></li>
+        <li><a href="tel:+1234567890">123-456-7890</a></li>
+      </ul>
+    </div>
+
+    <form class="contact__form" action="#" method="post">
+      <div class="row">
+        <label class="field">
+          <span>First Name *</span>
+          <input required name="firstName" autocomplete="given-name" />
+        </label>
+        <label class="field">
+          <span>Last Name *</span>
+          <input required name="lastName" autocomplete="family-name" />
+        </label>
+      </div>
+
+      <div class="row">
+        <label class="field">
+          <span>Email *</span>
+          <input type="email" required name="email" autocomplete="email" />
+        </label>
+        <label class="field">
+          <span>Phone</span>
+          <input type="tel" name="phone" inputmode="tel" autocomplete="tel" />
+        </label>
+      </div>
+
+      <label class="field">
+        <span>Address</span>
+        <input name="address" autocomplete="address-line1" />
+      </label>
+
+      <label class="field">
+        <span>Subject</span>
+        <input name="subject" />
+      </label>
+
+      <label class="field">
+        <span>Message</span>
+        <textarea name="message" rows="4"></textarea>
+      </label>
+
+      <button class="submit" type="submit">Submit</button>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="footer" class="footer">
+    <div class="ribbon">
+      <input class="emailbar" type="email" placeholder="Tu email" aria-label="Tu email" />
+      <button class="submit submit--small">Submit</button>
+    </div>
+
+    <div class="brands">
+      <img src="brand1.svg" alt="H Winner" />
+      <img src="brand2.svg" alt="HoM" />
+      <img src="brand3.svg" alt="100 Remodelers" />
+      <img src="brand4.svg" alt="Mel8 Certified" />
+    </div>
+
+    <p class="copy">© <span id="y"></span> Kamove · All rights reserved</p>
+  </footer>
+
+  <script>
+    // año del footer
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // menú móvil
+    const b = document.querySelector('.burger');
+    const m = document.getElementById('menu');
+    b.addEventListener('click', () => {
+      const open = m.classList.toggle('menu--open');
+      b.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+
+    // toggle Misión/Visión
+    const toggleBtn = document.getElementById('aboutToggle');
+    const panel = document.getElementById('mv-panel');
+
+    toggleBtn.addEventListener('click', () => {
+      const isOpen = panel.hasAttribute('hidden') === false;
+      if (isOpen) {
+        panel.classList.remove('open');
+        // espera la animación antes de ocultar para accesibilidad
+        setTimeout(() => panel.setAttribute('hidden', ''), 300);
+        toggleBtn.setAttribute('aria-expanded', 'false');
+        toggleBtn.textContent = 'Ver misión y visión';
+      } else {
+        panel.removeAttribute('hidden');
+        // forzar reflow para animación suave
+        void panel.offsetWidth;
+        panel.classList.add('open');
+        toggleBtn.setAttribute('aria-expanded', 'true');
+        toggleBtn.textContent = 'Cerrar';
+      }
+    });
+  </script>
+</body>
+</html>

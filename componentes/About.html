@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About · Equipo</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+ <header class="nav">
+  <button class="burger" id="burger" aria-label="Abrir menú"
+          aria-expanded="false" aria-controls="menu">☰</button>
+
+  <a class="brand" href="#">
+    <img id="logo" src="/img/logo.jpeg" alt="logo" />
+    
+  </a>
+
+  <nav class="menu" id="menu" hidden>
+    <a class="pill pill--active" href="/index.html">Kamove</a>
+    <a class="pill" href="/componentes/index.html">About</a>
+    <a class="pill" href="#contacto">Movimiento</a>
+    <a class="pill" href="#footer">Blog</a>
+  </nav>
+</header>
+<script>
+  const burger = document.getElementById('burger');
+  const menu   = document.getElementById('menu');
+
+  burger.addEventListener('click', () => {
+    const open = menu.classList.toggle('menu--open');
+    if (open) menu.removeAttribute('hidden'); else menu.setAttribute('hidden','');
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+
+  // Cerrar al elegir un enlace en móvil
+  menu.addEventListener('click', (e) => {
+    if (e.target.matches('a') && window.matchMedia('(max-width: 899px)').matches) {
+      menu.classList.remove('menu--open');
+      menu.setAttribute('hidden','');
+      burger.setAttribute('aria-expanded','false');
+    }
+  });
+</script>
+
+
+
+
+  <!-- CONTENEDOR -->
+  <main class="wrap">
+
+    <!-- ABOUT -->
+    <section class="about section-card">
+      <div class="about__col about__text">
+        <h2 class="eyebrow">About</h2>
+        <h3 class="about__title">Mi nombre es Karolay H…</h3>
+
+        <p>Bailarina de danza contemporánea, urbano y salsa caleña.</p>
+        <p>Entrenadora de gimnasia artística en el Club Force Gymnastic, certificada por la Liga de Gimnasia Vallecaucana.</p>
+        <p>Mi práctica profesional combina el rigor técnico con la exploración creativa, y se encuentra en constante evolución mediante el estudio de nuevos lenguajes del movimiento. Actualmente, estoy enfocada en consolidarme como una profesional interdisciplinar, con el objetivo de crear en cada bailarín una formación completa, que tenga en cuenta el cuidado del cuerpo y respete los procesos progresivos de aprendizaje.</p>
+
+        <ul class="social">
+          <li><a aria-label="Facebook" href="#">
+            <!-- facebook -->
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M22 12.06C22 6.48 17.52 2 11.94 2S2 6.48 2 12.06C2 17.07 5.66 21.2 10.44 22v-7H7.9v-2.94h2.54V9.86c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.23.2 2.23.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.77L15.9 15H13.55v7C18.34 21.2 22 17.07 22 12.06z" fill="currentColor"/></svg>
+          </a></li>
+          <li><a aria-label="Instagram" href="#">
+            <!-- instagram -->
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5A5.5 5.5 0 1 1 6.5 13 5.5 5.5 0 0 1 12 7.5zm0 2A3.5 3.5 0 1 0 15.5 13 3.5 3.5 0 0 0 12 9.5zM18 6.75a1 1 0 1 1-1 1 1 1 0 0 1 1-1z" fill="currentColor"/></svg>
+          </a></li>
+          <li><a aria-label="LinkedIn" href="#">
+            <!-- linkedin -->
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M4.98 3.5A2.5 2.5 0 1 1 2.5 6a2.5 2.5 0 0 1 2.48-2.5zM3 8h4v13H3zm7 0h3.8v1.8h.05A4.17 4.17 0 0 1 18.6 8c3.62 0 4.3 2.38 4.3 5.48V21H19v-6.2c0-1.48 0-3.38-2.06-3.38s-2.38 1.6-2.38 3.26V21H10z" fill="currentColor"/></svg>
+          </a></li>
+        </ul>
+
+        <a class="btn btn--brown" href="#">About Me</a>
+      </div>
+
+      <div class="about__col about__media">
+        <img src="/img/karolay.jpeg" alt="Karolay bailando" class="about__img">
+      </div>
+    </section>
+
+    <!-- EQUIPO -->
+    <section class="team">
+      <h2 class="team__title">Equipo</h2>
+      <div class="team__underline" aria-hidden="true"></div>
+      <p class="team__lead">This is your Team section. Briefly introduce the team then add their bios below. Click here to edit.</p>
+
+      <div class="team__grid">
+        <!-- Card 1 -->
+        <article class="member">
+          <img class="member__img" src="/img/rubeiro.jpeg" alt="Rubeiro Morcillo Saa">
+          <div class="member__body">
+            <h3 class="member__name">Rubeiro Morcillo Saa</h3>
+            <ul class="member__list">
+              <li>Licenciado en Educación Física y Deportes en la Universidad del Valle.</li>
+              <li>Estudio Profesional en Filosofía, bailarín de Breaking desde hace 16 años.</li>
+              <li>Profesor de Breaking en el semillero danza urbana y Breaking de la universidad.</li>
+            </ul>
+            <ul class="social">
+              <li><a aria-label="Facebook" href="#"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M22 12.06C22 6.48 17.52 2 11.94 2S2 6.48 2 12.06C2 17.07 5.66 21.2 10.44 22v-7H7.9v-2.94h2.54V9.86c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.23.2 2.23.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.77L15.9 15H13.55v7C18.34 21.2 22 17.07 22 12.06z" fill="currentColor"/></svg></a></li>
+              <li><a aria-label="Twitter/X" href="#"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M3 3h4.6l5.7 7.5L19.1 3H21l-7 9.2L21 21h-4.6l-6-8L4.9 21H3l7.3-9.6z" fill="currentColor"/></svg></a></li>
+              <li><a aria-label="LinkedIn" href="#"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M4.98 3.5A2.5 2.5 0 1 1 2.5 6a2.5 2.5 0 0 1 2.48-2.5zM3 8h4v13H3zm7 0h3.8v1.8h.05A4.17 4.17 0 0 1 18.6 8c3.62 0 4.3 2.38 4.3 5.48V21H19v-6.2c0-1.48 0-3.38-2.06-3.38s-2.38 1.6-2.38 3.26V21H10z" fill="currentColor"/></svg></a></li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="member">
+          <img class="member__img" src="/img/korag.jpeg" alt="Yecid Fabián Silva Catuché">
+          <div class="member__body member__body--tall">
+            <h3 class="member__name">Yecid Fabián Silva Catuché</h3>
+            <ul class="member__list">
+              <li>Presidente Club deportiva Primates Academy.</li>
+              <li>Entrenador de Parkour 16 años de experiencia.</li>
+              <li>Entrenador Parkour FIG Level 1.</li>
+              <li>Juez internacional CAT 3.</li>
+              <li>Formador Nacional de Jueces.</li>
+              <li>Presidente CT Parkour Colombia.</li>
+              <li>Organizador de Campeonatos Nacionales.</li>
+              <li>Diseñador pistas de competencia parkour FIG.</li>
+              <li>Personal Trainer.</li>
+            </ul>
+            <a class="btn btn--brown btn--small" href="#">Let’s Chat</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>
