@@ -192,7 +192,8 @@ body{
 .about__img{
   width:100%;
   height:100%;
-  object-fit:cover;
+  object-fit: cover;
+  object-position: 50% 30%;   /* sube el encuadre para mostrar la cara */
   border-radius:6px;
 }
 .about__media{ order:2; }
@@ -245,10 +246,27 @@ body{
 }
 .member__img{
   width:100%;
-  height:220px;
-  object-fit:cover;
+  height:220px;               /* 260px en ≥850px como ya tienes */
+  object-fit: cover;
+  object-position: 50% 30%;   /* centra y sube un poco el foco */
   display:block;
 }
+
+@media (min-width: 850px){
+  .member__img{ height:260px; object-position: 50% 28%; }
+}
+
+/* presets de foco vertical para retratos */
+.face-25{ object-position: 50% 25%; }
+.face-28{ object-position: 50% 28%; }
+.face-30{ object-position: 50% 30%; }
+.face-33{ object-position: 50% 33%; }
+.face-35{ object-position: 50% 35%; }
+
+
+
+
+
 .member__body{
   padding:18px;
   background:#d9d9d9; /* gris de tarjeta inferior (como captura) */
