@@ -170,7 +170,7 @@ body{
   place-items:center;
   width:34px; height:34px;
   border-radius:50%;
-  background:#151515;
+  background:transparent;
   color:#fff;
   text-decoration:none;
 }
