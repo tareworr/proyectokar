@@ -150,7 +150,7 @@ body{
 .btn:active{ transform:translateY(1px); }
 
 .btn--brown{
-  background:var(--brown);
+  background:#2563eb;
   color:#fff;
   padding:12px 18px;
 }

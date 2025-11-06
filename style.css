@@ -108,3 +108,7 @@ body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sa
   .row{grid-template-columns:1fr 1fr}
   .ribbon{max-width:760px;justify-self:center}
 }
+#mision{
+  display: flex;
+  display: grap;
+}

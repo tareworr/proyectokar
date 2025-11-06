@@ -122,8 +122,13 @@ body{
   color:#fff;
   box-shadow:0 10px 22px rgba(0,0,0,.35);
   cursor:pointer;
+  background: #0055ff;
 }
 .chat-fab__icon{ font-size:18px; line-height:1; }
+.chat-fab__icon{
+  width: 50px;
+  height: 50px;
+}
 
 /* ====== Responsive tweaks ====== */
 @media (max-width: 800px){
@@ -258,6 +263,7 @@ body{
   cursor:pointer;
   box-shadow: 0 10px 22px rgba(0,0,0,.15);
   transition: transform .06s ease, filter .2s ease;
+  background: #0055ff;;
 }
 .tec-card__btn:hover{ filter: brightness(.95); }
 .tec-card__btn:active{ transform: translateY(1px); }
@@ -315,6 +321,12 @@ body{
 
 .info__box{
   background:transparent;
+   background-color: #ffffff; /* Color de fondo */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1); /* Sombra */
+    transition: box-shadow 0.3s ease; /* Transición suave para la sombra */
+     padding: 20px; /* Espaciado interno */
+     box-shadow: 0 8px 16px #0b49ac, 0 12px 40px #14428d /* Sombra más pronunciada */
 }
 .info__title{
   margin:0 0 8px;
@@ -331,6 +343,12 @@ body{
   margin:0;
   font: 700 18px/1.5 Poppins, sans-serif;
   color:#2f2b34;
+   padding: 20px; /* Espaciado interno */
+    background-color: #ffffff; /* Color de fondo */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px #0b63f0 0 6px 20px #3b82f6; /* Sombra */
+    transition: box-shadow 0.3s ease; /* Transición suave para la sombra */
+     box-shadow: 0 8px 16px #0b49ac, 0 12px 40px #14428d /* Sombra más pronunciada */
 }
 
 /* ====== Footer ====== */
@@ -593,4 +611,9 @@ body{
     padding:0; border:0; box-shadow:none;
     transform:none; opacity:1; pointer-events:auto;
   }
+}
+
+
+.textovideo{
+  color: black;
 }
