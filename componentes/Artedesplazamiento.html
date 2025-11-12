@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parkour - El arte del desplazamiento</title>
+  <link rel="stylesheet" href="Artedesplazamiento.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  
+<!-- HEADER -->
+<header class="nav">
+  <a class="brand" href="/index.html">
+    <img id="logo" src="/img/logo.jpeg" alt="logo" />
+  </a>
+
+  <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false">
+    ☰
+  </button>
+
+  <nav class="menu" id="menu">
+    <a class="pill" href="/componentes/About.html">About</a>
+    <a class="pill" href="/componentes/Movimiento.html">Movimiento</a>
+    <!-- <a class="pill" href="#footer">Blog</a> -->
+  </nav>
+</header>
+
+<script>
+  // JS para abrir/cerrar menú en móvil
+  const burger = document.getElementById("burger");
+  const menu = document.getElementById("menu");
+
+  burger.addEventListener("click", () => {
+    const expanded = burger.getAttribute("aria-expanded") === "true" || false;
+    burger.setAttribute("aria-expanded", !expanded);
+    menu.classList.toggle("menu-open");
+  });
+</script>
+
+  <section id="contenido" class="content">
+    <div class="text-block">
+      <h2>Aprende el salto de precisión desde cero</h2>
+      <p>
+        El salto de precisión es una de las habilidades básicas del parkour, y en este video, ideal para principiantes,
+        aprenderás a ejecutarlo de manera progresiva.
+      </p>
+      <p>
+        Antes de iniciar la práctica, te recomendamos realizar una movilidad articular completa, un calentamiento general
+        y los ejercicios específicos mostrados en el video como preparación previa a la ejecución del salto.
+      </p>
+      <p>
+        Al finalizar la práctica, dedica unos minutos a estiramientos que ayuden a relajar los músculos y mejorar la recuperación.
+      </p>
+    </div>
+
+  
+
+
+<div class="video-block">
+  <div class="video-placeholder">
+    <video id="videpactividad" src="/videos/actividad.mp4" autoplay muted loop playsinline></video>
+  </div>
+  <button id="toggleAudio">🔊 Activar sonido</button>
+</div>
+
+
+
+<script>
+  const video = document.getElementById('videpactividad');
+  const boton = document.getElementById('toggleAudio');
+
+  boton.addEventListener('click', () => {
+    // Cambia el estado de mute
+    video.muted = !video.muted;
+
+    // Reproduce el video si está pausado
+    if (video.paused) {
+      video.play();
+    }
+
+    // Cambia el texto del botón según el estado
+    if (video.muted) {
+      boton.textContent = '🔊 Activar sonido';
+    } else {
+      boton.textContent = '🔇 Silenciar';
+    }
+  });
+</script>
+
+
+
+    
+
+<script>
+
+  const button = document.getElementById('playButton');
+
+  button.addEventListener('click', () => {
+    video.muted = false;
+    video.play();
+    button.style.display = 'none'; // Oculta el botón después de iniciar
+  });
+</script>
+  </section>
+
+  <footer class="footer">
+    <img src="/img/footerreserva.jpeg" alt="Edificio moderno">
+    <div class="footer-text">
+      <a href="https://wa.me/573337285141" id="reservatuclase">RESERVA AQUÍ TUS CLASES</a>
+      <br>
+       <a href="https://t.me/Retroparkourbot" id="reservatuclase">ENVIA TU RETROALIMENTACION</a>
+  
+
+      <p>© 2025 Kamova. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

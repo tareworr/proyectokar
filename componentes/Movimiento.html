@@ -7,6 +7,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="Movimientos.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
 </head>
 <body>
 <header class="nav" id="site-nav">
@@ -63,14 +65,14 @@
         <article class="tec-card">
           <div class="tec-card__badge">1</div>
           <div class="tec-card__body">
-            <h3 class="tec-card__heading">Danza contemporanea</h3>
+            <h3 class="tec-card__heading">Danza contemporánea (Curso no habilitado)</h3>
             <p class="tec-card__text">
               La danza contemporanea integra diversas formas de moverse, lo que permite que a traves de ella podamos
               dialogar y habitar en libertad el movimiento.
             </p>
 
             <button class="tec-card__btn" type="button"
-                    aria-expanded="false" aria-controls="tec-panel-1">More Info</button>
+                    aria-expanded="false" aria-controls="tec-panel-1">Video</button>
 
             <div id="tec-panel-1" class="tec-panel" hidden>
               <div class="tec-video">
@@ -91,14 +93,14 @@ Méndez Mena, J. S. (2024, julio). Rincón, K. en fragmento grabado en clase de 
         <article class="tec-card tec-card--mid">
           <div class="tec-card__badge">2</div>
           <div class="tec-card__body">
-            <h3 class="tec-card__heading">Breaking</h3>
+            <h3 class="tec-card__heading">Breaking  (Curso no habilitado)</h3>
             <p class="tec-card__text">
               En el break, la calle es un espacio de expresión; el suelo, memoria. Cada movimiento resignifica el
               cuerpo en territorio vivo y de resistencia.
             </p>
 
             <button class="tec-card__btn" type="button"
-                    aria-expanded="false" aria-controls="tec-panel-2">More Info</button>
+                    aria-expanded="false" aria-controls="tec-panel-2">Video</button>
 
             <div id="tec-panel-2" class="tec-panel" hidden>
               <div class="tec-video">
@@ -113,20 +115,22 @@ Méndez Mena, J. S. (2024, julio). Rincón, K. en fragmento grabado en clase de 
         <article class="tec-card">
           <div class="tec-card__badge">3</div>
           <div class="tec-card__body">
-            <h3 class="tec-card__heading">Parkour</h3>
+            <h3 class="tec-card__heading">Parkour (Curso habilitado)</h3>
             <p class="tec-card__text">
               El parkour, como deporte y filosofía del movimiento, transforma los espacios urbanos en escenarios
               dinámicos; donde el cuerpo entra en dialogo con la arquitectura con el cuerpo.
             </p>
 
             <button class="tec-card__btn" type="button"
-                    aria-expanded="false" aria-controls="tec-panel-3">More Info</button>
+                    aria-expanded="false" aria-controls="tec-panel-3">Video</button>
 
             <div id="tec-panel-3" class="tec-panel" hidden>
               <div class="tec-video">
                 <video src="../videos/koragpresentacionParkur.mp4" autoplay muted loop playsinline></video>
               </div>
               <p class="textovideo"> T. (cámara). (2021, septiembre). Video de parkour de Korag [Publicación en Instagram].  <a href=" https://www.instagram.com/p/CUbPijhLoL1/?igsh=czIxMmxpYWVoZm1z">Instagram</a></p>
+              <button class="tec-card__btn" type="button"
+                    aria-expanded="false" aria-controls="tec-panel-3"><a id="mandaparkurcurso" href="/componentes/Artedesplazamiento.html">Mas información del curso</a></button>
             </div>
           </div>
         </article>
@@ -137,7 +141,7 @@ Méndez Mena, J. S. (2024, julio). Rincón, K. en fragmento grabado en clase de 
 <section class="info-band">
   <div class="info__container">
     <div class="info__col info__col--left">
-      <p class="info__lead">
+      <p class="info__lead" id="textodescripcion">
         En mis clases, a través del movimiento, entrenamos habilidades motrices que nos permiten
         habitar cualquier espacio y brindamos la oportunidad de adquirir herramientas corporales a partir
         de distintas técnicas de movimiento, que contribuirán a la construcción creativa de coreografías
